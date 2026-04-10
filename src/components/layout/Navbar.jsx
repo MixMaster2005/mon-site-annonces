@@ -15,10 +15,10 @@ import {
 } from '@heroicons/react/24/outline'
 
 const homeLinks = [
-  { href: '/#hero', label: 'Hjem' },
-  { href: '/#categories', label: 'Kategorier' },
-  { href: '/#annonces', label: 'Siste annonser' },
-  { href: '/#publier', label: 'Opprett annonse' },
+  { href: '#hero', label: 'Hjem' },
+  { href: '#categories', label: 'Kategorier' },
+  { href: '#annonces', label: 'Siste annonser' },
+  { href: '#publier', label: 'Opprett annonse' },
 ]
 
 const nextTheme = (theme) => {
