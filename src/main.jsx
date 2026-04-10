@@ -7,7 +7,7 @@ import { ThemeProvider } from './components/ThemeProvide'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <HashRouter basename="/mon-site-annonces">
+    <HashRouter>
       <ThemeProvider>
         <App />
       </ThemeProvider>
