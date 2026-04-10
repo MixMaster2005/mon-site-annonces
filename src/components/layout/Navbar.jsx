@@ -15,10 +15,10 @@ import {
 } from '@heroicons/react/24/outline'
 
 const homeLinks = [
-  { href: '#hero', label: 'Hjem' },
-  { href: '#categories', label: 'Kategorier' },
-  { href: '#annonces', label: 'Siste annonser' },
-  { href: '#publier', label: 'Opprett annonse' },
+  { href: '/#hero', label: 'Hjem' },
+  { href: '/#categories', label: 'Kategorier' },
+  { href: '/#annonces', label: 'Siste annonser' },
+  { href: '/#publier', label: 'Opprett annonse' },
 ]
 
 const nextTheme = (theme) => {
@@ -35,15 +35,11 @@ const getThemeIcon = (theme) => {
 
 export default function Navbar() {
   const { theme, setTheme, resolvedTheme } = useTheme()
-  const location = useLocation()
   const navigate = useNavigate()
   const [searchQuery, setSearchQuery] = useState('')
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
-  const homeSectionLinks = useMemo(
-    () => homeLinks.map((link) => ({ ...link, href: location.pathname === '/' ? link.href : `/${link.href}` })),
-    [location.pathname],
-  )
+  const homeSectionLinks = homeLinks;
 
   const submitSearch = (event) => {
     event.preventDefault()
