@@ -1,5 +1,5 @@
-import { useMemo, useState } from 'react'
-import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom'
+import { useState } from 'react'
+import { Link, NavLink, useNavigate } from 'react-router-dom'
 import { useTheme } from '../ThemeProvide'
 import { Button } from '../ui/Button.jsx'
 import { Input } from '../ui/Input.jsx'
@@ -14,11 +14,13 @@ import {
   XMarkIcon,
 } from '@heroicons/react/24/outline'
 
+const base = import.meta.env.BASE_URL
+
 const homeLinks = [
-  { href: '/#hero', label: 'Hjem' },
-  { href: '/#categories', label: 'Kategorier' },
-  { href: '/#annonces', label: 'Siste annonser' },
-  { href: '/#publier', label: 'Opprett annonse' },
+  { href: `${base}#hero`, label: 'Hjem' },
+  { href: `${base}#categories`, label: 'Kategorier' },
+  { href: `${base}#annonces`, label: 'Siste annonser' },
+  { href: `${base}#publier`, label: 'Opprett annonse' },
 ]
 
 const nextTheme = (theme) => {
