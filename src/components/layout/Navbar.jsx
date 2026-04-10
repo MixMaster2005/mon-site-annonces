@@ -14,13 +14,11 @@ import {
   XMarkIcon,
 } from '@heroicons/react/24/outline'
 
-const base = import.meta.env.BASE_URL
-
 const homeLinks = [
-  { href: `${base}#hero`, label: 'Hjem' },
-  { href: `${base}#categories`, label: 'Kategorier' },
-  { href: `${base}#annonces`, label: 'Siste annonser' },
-  { href: `${base}#publier`, label: 'Opprett annonse' },
+  { href: '/#hero', label: 'Hjem' },
+  { href: '/#categories', label: 'Kategorier' },
+  { href: '/#annonces', label: 'Siste annonser' },
+  { href: '/#publier', label: 'Opprett annonse' },
 ]
 
 const nextTheme = (theme) => {
