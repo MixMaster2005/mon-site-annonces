@@ -63,14 +63,14 @@ export default function Navbar() {
 
         <nav className="hidden items-center gap-2 md:flex flex-1 justify-center">
           {homeSectionLinks.map((link) => (
-            <a
+            <Link
               key={link.href + link.label}
-              href={link.href}
+              to={link.href}
               onClick={() => setMobileMenuOpen(false)}
               className="rounded-full px-3 py-2 text-sm font-medium text-foreground/80 transition hover:text-primary hover:underline hover:underline-offset-8 hover:decoration-primary hover:decoration-4"
             >
               {link.label}
-            </a>
+            </Link>
           ))}
           <NavLink
             to="/recherche"
@@ -152,14 +152,14 @@ export default function Navbar() {
 
             <nav className="flex flex-col gap-2">
               {homeSectionLinks.map((link) => (
-                <a
+                <Link
                   key={link.href + link.label}
-                  href={link.href}
+                  to={link.href}
                   onClick={() => setMobileMenuOpen(false)}
                   className="rounded-full px-3 py-2 text-sm font-medium text-foreground/80 transition hover:bg-muted hover:text-foreground"
                 >
                   {link.label}
-                </a>
+                </Link>
               ))}
               <NavLink
                 to="/recherche"
